@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema chiaro -->
+    <style name="Theme.ShiftManager" parent="Theme.Material3.DynamicColors.Light.NoActionBar">
+        <!-- Nasconde l'ActionBar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Colori personalizzati -->
+        <item name="colorPrimary">@color/title_text_color</item>
+        <item name="colorPrimaryVariant">@color/button_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/button_outline_color</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="colorOnBackground">@color/black</item>
+    </style>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Data e Ora -->
+    <TextView
+        android:id="@+id/tv_DataOra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="01/03/2025 09:00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Ore Lavorate -->
+    <TextView
+        android:id="@+id/tv_OreLavorate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ore: 8"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_DataOra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Paga Oraria -->
+    <TextView
+        android:id="@+id/tv_Paga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Paga: 15.5 €/h"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_OreLavorate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Note -->
+    <TextView
+        android:id="@+id/tv_Note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Note: Turno straordinario"
+        android:textSize="14sp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tv_Paga"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:padding="24dp">
+
+    <!-- Layout verticale per organizzare i pulsanti -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:orientation="vertical">
+
+        <!-- Bottone per GitHub -->
+        <LinearLayout
+            android:id="@+id/btn_github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/github_logo"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="GitHub Logo"
+                android:src="@drawable/ic_github"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_github"
+                android:layout_width="331dp"
+                android:layout_height="40dp"
+                android:background="@color/button_color"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:text="Visita il mio GitHub"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Bottone per Giorno di Paga -->
+        <TextView
+            android:id="@+id/btn_giorno_paga"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:paddingStart="8dp"
+            android:background="@color/button_color"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:text="Giorno di paga"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/button_color"
+        app:tint="@color/white" />
+
+</FrameLayout>

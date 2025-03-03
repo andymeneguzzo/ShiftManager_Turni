@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MonthFilterActivity"
+    android:padding="16dp">
+
+    <!-- Layout orizzontale per Mese e Anno -->
+    <LinearLayout
+        android:id="@+id/layout_date_inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Input per il Mese -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Mese">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Mese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Spazio tra Mese e Anno -->
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"/>
+
+        <!-- Input per l'Anno -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Anno">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Anno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="4"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- TextView per mostrare Paga Totale e Ore Totali -->
+    <TextView
+        android:id="@+id/tv_Riassunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ore Totali: 0 | Paga Totale: €0.00"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_date_inputs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RecyclerView per la lista dei turni filtrati -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Filtrato"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Riassunto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

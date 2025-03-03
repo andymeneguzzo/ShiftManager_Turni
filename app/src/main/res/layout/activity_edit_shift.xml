@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditShiftActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center|left"
+        android:text="Modifica il turno ✏️"
+        android:textSize="20sp"/>
+
+    <!-- Contenitore per i campi di input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="100dp">
+
+        <!-- Campo per Data e Ora -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data e Ora">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_DataOra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo per Ore Lavorate -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Ore lavorate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_OreLavorate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo per Paga Oraria -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Paga Oraria (€)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_PagaOraria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo per Note (più grande) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Note">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Note"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="4"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Pulsante Fluttuante per Salvataggio -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_ModificaTurno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@drawable/ic_edit"
+        app:backgroundTint="@color/button_color"
+        app:tint="@color/white"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_EliminaTurno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|start"
+        app:srcCompat="@drawable/ic_bin"
+        app:backgroundTint="#D92222"
+        app:tint="@color/white"/>
+
+</FrameLayout>
